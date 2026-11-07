@@ -1,0 +1,42 @@
+
+import type { Block8x8 } from "./dct";
+
+// Standard JPEG zigzag traversal order
+export const ZIGZAG_ORDER: [number, number][] = [
+  [0, 0],
+  [0, 1], [1, 0],
+  [2, 0], [1, 1], [0, 2],
+  [0, 3], [1, 2], [2, 1], [3, 0],
+  [4, 0], [3, 1], [2, 2], [1, 3], [0, 4],
+  [0, 5], [1, 4], [2, 3], [3, 2], [4, 1], [5, 0],
+  [6, 0], [5, 1], [4, 2], [3, 3], [2, 4], [1, 5], [0, 6],
+  [0, 7], [1, 6], [2, 5], [3, 4], [4, 3], [5, 2], [6, 1], [7, 0],
+  [7, 1], [6, 2], [5, 3], [4, 4], [3, 5], [2, 6], [1, 7],
+  [2, 7], [3, 6], [4, 5], [5, 4], [6, 3], [7, 2],
+  [7, 3], [6, 4], [5, 5], [4, 6], [3, 7],
+  [4, 7], [5, 6], [6, 5], [7, 4],
+  [7, 5], [6, 6], [5, 7],
+  [6, 7], [7, 6],
+  [7, 7],
+];
+
+export function zigzagScan(block: Block8x8): number[] {
+  return ZIGZAG_ORDER.map(([row, col]) => block[row][col]);
+}
+
+export function inverseZigzag(values: number[]): Block8x8 {
+  if (values.length !== 64) {
+    throw new Error("Zigzag input must contain exactly 64 values.");
+  }
+
+  const block: Block8x8 = Array.from(
+    { length: 8 },
+    () => Array(8).fill(0)
+  );
+
+  ZIGZAG_ORDER.forEach(([row, col], index) => {
+    block[row][col] = values[index];
+  });
+
+  return block;
+}

@@ -1,0 +1,201 @@
+
+.microscope-page {
+  min-height: 100vh;
+  padding: 30px 7%;
+  color: #f8fafc;
+  background: #080b18;
+}
+
+.micro-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.micro-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a5b4fc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.micro-back:hover {
+  color: #c4b5fd;
+}
+
+.micro-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #c4b5fd;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.micro-heading {
+  margin: 75px 0 35px;
+  max-width: 700px;
+}
+
+.micro-eyebrow {
+  color: #a78bfa;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.micro-heading h1 {
+  font-size: clamp(34px, 5vw, 55px);
+  margin: 18px 0;
+  line-height: 1.15;
+}
+
+.micro-heading h1 span {
+  color: #a78bfa;
+}
+
+.micro-heading p,
+.micro-card p,
+.micro-insight p {
+  color: #9ca3af;
+  line-height: 1.7;
+}
+
+.micro-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.micro-controls label {
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+.micro-controls select {
+  padding: 11px 15px;
+  border: 1px solid #393452;
+  border-radius: 9px;
+  background: #17152b;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.micro-controls select:focus {
+  border-color: #a78bfa;
+}
+
+.micro-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.micro-card,
+.micro-insight {
+  padding: 25px;
+  border: 1px solid #29263f;
+  border-radius: 17px;
+  background: #111326;
+}
+
+.micro-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #c4b5fd;
+}
+
+.micro-card-heading h2 {
+  font-size: 18px;
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 4px;
+  margin-top: 22px;
+}
+
+.number-cell,
+.frequency-cell {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: clamp(8px, 1vw, 12px);
+  font-weight: 600;
+  overflow: hidden;
+  transition: background 0.2s ease;
+}
+
+.frequency-cell {
+  color: white;
+  background: #6d28d9;
+}
+
+.micro-insight {
+  margin-top: 22px;
+}
+
+.micro-insight h2 {
+  color: #c4b5fd;
+  margin-top: 0;
+}
+
+.micro-insight p {
+  margin-bottom: 12px;
+}
+
+.micro-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 35px 0 10px;
+  color: #77758c;
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  .micro-grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .microscope-page {
+    padding: 25px 5%;
+  }
+
+  .micro-heading {
+    margin-top: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .micro-brand {
+    font-size: 10px;
+  }
+
+  .micro-card,
+  .micro-insight {
+    padding: 16px;
+  }
+
+  .number-grid {
+    gap: 2px;
+  }
+
+  .number-cell,
+  .frequency-cell {
+    font-size: 8px;
+  }
+}

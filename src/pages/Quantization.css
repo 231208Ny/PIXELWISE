@@ -1,0 +1,226 @@
+
+.quant-page {
+  min-height: 100vh;
+  padding: 30px 7%;
+  color: #f8fafc;
+  background: #080b18;
+}
+
+.quant-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.quant-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a5b4fc;
+  text-decoration: none;
+}
+
+.quant-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #c4b5fd;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.quant-heading {
+  margin: 70px 0 35px;
+  max-width: 720px;
+}
+
+.quant-eyebrow,
+.control-label {
+  color: #a78bfa;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.quant-heading h1 {
+  font-size: clamp(34px, 5vw, 55px);
+  margin: 18px 0;
+}
+
+.quant-heading h1 span {
+  color: #a78bfa;
+}
+
+.quant-heading p,
+.quant-card p,
+.quant-insight p {
+  color: #9ca3af;
+  line-height: 1.7;
+}
+
+.quality-control,
+.quant-card,
+.quant-insight {
+  padding: 25px;
+  border: 1px solid #29263f;
+  border-radius: 17px;
+  background: #111326;
+}
+
+.quality-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #c4b5fd;
+}
+
+.quality-header h2 {
+  font-size: 35px;
+  margin: 12px 0 0;
+}
+
+.quality-header p {
+  color: #9ca3af;
+  margin-top: 5px;
+}
+
+.quality-slider {
+  width: 100%;
+  margin: 25px 0 10px;
+  accent-color: #a78bfa;
+  cursor: pointer;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.quant-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 22px 0;
+}
+
+.quant-stats article {
+  padding: 20px;
+  border: 1px solid #29263f;
+  border-radius: 13px;
+  background: #111326;
+}
+
+.quant-stats span {
+  display: block;
+  color: #9ca3af;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.quant-stats strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 25px;
+  color: #c4b5fd;
+}
+
+.quant-matrices {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.quant-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #c4b5fd;
+}
+
+.quant-card-heading h2 {
+  font-size: 17px;
+}
+
+.quant-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 3px;
+  margin-top: 20px;
+}
+
+.quant-cell {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  font-size: clamp(7px, 0.8vw, 11px);
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.original-cell {
+  color: white;
+}
+
+.active-cell {
+  background: #6d28d9;
+  color: white;
+}
+
+.zero-cell {
+  background: #25243a;
+  color: #77758c;
+}
+
+.table-cell {
+  background: #1d2940;
+  color: #bfdbfe;
+}
+
+.quant-insight {
+  margin-top: 22px;
+}
+
+.quant-insight h2 {
+  color: #c4b5fd;
+}
+
+.quant-formula {
+  padding: 17px;
+  margin-top: 18px;
+  border-radius: 10px;
+  background: #1b1830;
+  color: #ddd6fe;
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.quant-footer {
+  padding: 35px 0 10px;
+  color: #77758c;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .quant-matrices {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .quant-page {
+    padding: 25px 5%;
+  }
+
+  .quant-stats {
+    grid-template-columns: 1fr;
+  }
+}
